@@ -6,21 +6,48 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="text/javascript">
         function codeAddress() {
-            var sizer = function (word) {
+alert("Instuctions: you will need to know how to use the program, please read the following popup!");
+confirm("we wil ask for a word or a sentance, if you want te size of ONE word in A sentence you will learn how to give us the correct numbers to do it, we will explain on how to do this in the next popup");
+alert("To do this you need to learn a tiny bit of JavaScript, it's not going to be hard cause all you're learning is numbers and how to use them in this program, so lets say you're going to want the size of the word 'hello' in a sentence, i will give you an example sentance 'I said hello to a guy in the store!");
+alert("so now to the number part, in the sentence'I said hello to a guy in the store' the 'I' ion the sentance is thenumber 0, the space next to the 'I' is 1, now we will continue to the letter that starts with the word you want to size, let's get you to custimize what you want to see, what is the number 'h' is on for the word hello in the sentence!");
+var theNumber = (prompt("I said hello to a guy in the store"));
+if (theNumber === "7") {
+	confirm("Congrats, you are correct, now here comes the tricky part, now you need to learn the last part, the 2nd number! it is almost the same as the last one, the first one showes the number you have, the second one dosnt, what i mean is on number 7 it will show the h, if i did the same way on the end of the word 'hello' and since hello was 7 e would be 8 l would be 9 and the second l would be 10 and then the e would be 11, but if i put 11 it would show up as hell so i got to add 1 to it and it will show up, as hello, so when you get to the last letter on the word you want just add 1!");
+}
+else {
+	confirm("Congrats, refresh the page to try again!");
+}
+confirm("so this is what it should look like       " + "I said hello to a guy in the store".substring(7, 12) + " as you can see i used the numbers you gave me to get the size of that word, but not twchnically cause i didnt actually give u the size of it, but that is the way im going to give it to you!");
+
+
+
+
+//needz for later on
+//var sizer2 = function (word2) {
+//	alert("Here is the length of your word!   " + word2.sublength();
+//};
+var sizer = function (word) {
 	alert("Here is the length of your word!   " + word.length);
 };
-var theWord = prompt("What word do you want to get the length of? Warning: Spaces count!");
-sizer(theWord);
- var doYou = (prompt("Do you want to get the size of another word? Yes or No, Has to be Captilized"));
+var question = prompt("do you want a sentence or just one word 'Yes' or 'No' Cap Sensitive");
+if (question === "Yes") {
+	var theSentence = (prompt("what is the sentance you want?"));
+	var theNumber = (prompt("what is the first number of the word you want to get the size of out of you're sentance, remember it starts with 0, " + "'" + theSentence + "'"));
+	var theNumber2 = (prompt("what is the second number of the word you want to get the size of out of you're sentance, remember it starts with 0, " + "'" + theSentence + "'"));
+	var thestring =  theSentence.substring(theNumber, theNumber2);
+	var theAnswer = thestring.length
+	alert("the size of the word you selected, if selected it correctly, is       " + theAnswer);
+	var question = (prompt("do you want to do this again or do you want to use the single word or do you want to quit? ohg well i'm going to move you to the single word cause this is getting boring, i should probaly delete this then but im to lazy to do it"));
+	
+}
+else {
+	confirm("hi");
+}
+alert("if there is any spelling or spaceing mistakes i am very sorry, coding is very tricky, i will fix it soon, counting bugs to!");
  var i = 2;
 while (i <= 10) {
-	if (doYou === "Yes") {
-		var theWord = prompt("What word do you want to get the length of? Warning: Spaces count!");
-		sizer(theWord);
-	}
-	else {
-		g
-	}
+var theFinaleWord = (prompt("what word do you want to get the size of?"));
+sizer(theFinaleWord);
 }
         }
         window.onload = codeAddress;
